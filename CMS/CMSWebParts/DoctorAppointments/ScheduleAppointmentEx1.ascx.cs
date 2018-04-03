@@ -14,7 +14,7 @@ public partial class CMSWebParts_DoctorAppointments_ScheduleAppointmentEx1 : CMS
 {
     #region Variables
 
-    private List<String> errorList;
+    private List<String> errors;
 
     #endregion
 
@@ -59,7 +59,7 @@ public partial class CMSWebParts_DoctorAppointments_ScheduleAppointmentEx1 : CMS
         else
         {
             // show all errors
-            ShowErrors(errorList);
+            ShowErrors(errors);
         }
     }
 
@@ -121,13 +121,13 @@ public partial class CMSWebParts_DoctorAppointments_ScheduleAppointmentEx1 : CMS
     /// <summary>
     /// Displays errors on site
     /// </summary>
-    private void ShowErrors(List<String> errorList)
+    private void ShowErrors(List<String> errors)
     {
-        if (errorList.Count > 0)
+        if (errors.Count > 0)
         {
             // bind Error list
-            ErrorList.DataSource = errorList;
-            ErrorList.DataBind();
+            errors.DataSource = errors;
+            errors.DataBind();
             plcErrorMessage.Visible = true;
         }
     }

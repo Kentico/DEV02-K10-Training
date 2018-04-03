@@ -13,7 +13,7 @@ public partial class CMSWebParts_DoctorAppointments_ScheduleAppointmentEx3 : CMS
 {
     #region Variables
 
-    private List<String> errorList;
+    private List<String> errors;
 
     #endregion
 
@@ -74,7 +74,7 @@ public partial class CMSWebParts_DoctorAppointments_ScheduleAppointmentEx3 : CMS
         else
         {
             // show all errors
-            ShowErrors(errorList);
+            ShowErrors(errors);
         }
     }
 
