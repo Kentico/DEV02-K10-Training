@@ -171,7 +171,7 @@ public partial class CMSWebParts_DoctorAppointments_ScheduleAppointmentEx1 : CMS
     private bool ValidateForm()
     {
         bool isValid = true;
-        errorList = new List<String>();
+        var errorList = new List<String>();
 
         if (String.IsNullOrEmpty(FirstName.Value))
         {
